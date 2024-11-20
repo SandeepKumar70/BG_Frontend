@@ -24,12 +24,9 @@ const EmployeeSelector = ({ onEmployeesChange }) => {
     setError(null);
     
     try {
-      // const response = await fetch('/employee/getAllEmployee');
       const response = await axios.get("https://bg-backend-zxco.onrender.com/employee/getAllEmployee");
-      // if (!response.ok) throw new Error('Failed to fetch employees');
       
       console.log(" =======================",response.data.data)
-      // const data = await response.json();
       const employees = response.data.data || [];
 
       setSuggestions(employees);
