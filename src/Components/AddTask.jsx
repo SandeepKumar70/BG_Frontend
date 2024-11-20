@@ -25,7 +25,7 @@ const EmployeeSelector = ({ onEmployeesChange }) => {
     
     try {
       // const response = await fetch('/employee/getAllEmployee');
-      const response = await axios.get(getAllEmployee);
+      const response = await axios.get("https://bg-backend-zxco.onrender.com/employee/getAllEmployee");
       if (!response.ok) throw new Error('Failed to fetch employees');
       
       const data = await response.json();
