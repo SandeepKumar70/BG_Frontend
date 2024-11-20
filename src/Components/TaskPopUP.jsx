@@ -106,7 +106,7 @@ const TaskPopUp = ({ event = {}, isOpen, onClose }) => {
       setToTime(nextToTime);
       setTitle("");
       setDescription("");
-      setSuccessMessage("Tast Submit  successfully");
+      setSuccessMessage("Task Submit  successfully");
       
       setTimeout(() => {
         setSuccessMessage(null);
