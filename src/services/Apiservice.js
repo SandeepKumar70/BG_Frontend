@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create an axios instance with base configuration
 export const apiClient = axios.create({
-  baseURL: import.meta.env.LIVE_HOST_LINK || 'https://bg-frontend-delta.vercel.app/', // Update this to match your actual API base URL
+  baseURL: import.meta.env.VITE_LIVE_HOST_LINK || 'https://bg-frontend-delta.vercel.app/', // Update this to match your actual API base URL
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
