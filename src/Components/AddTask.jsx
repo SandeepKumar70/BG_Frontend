@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, User, Search, AlertCircle } from 'lucide-react';
+import axios from 'axios';
+import { getAllEmployee } from '../../../Backend/src/controllers/employee.controller';
+
+const base_url = import.meta.env.VITE_BACKEND_LIVE;
 
 const EmployeeSelector = ({ onEmployeesChange }) => {
   const [selectedEmployees, setSelectedEmployees] = useState([]);
@@ -20,7 +24,8 @@ const EmployeeSelector = ({ onEmployeesChange }) => {
     setError(null);
     
     try {
-      const response = await fetch('http://localhost:3000/employee/getAllEmployee');
+      // const response = await fetch('/employee/getAllEmployee');
+      const response = await axios.get(getAllEmployee);
       if (!response.ok) throw new Error('Failed to fetch employees');
       
       const data = await response.json();
