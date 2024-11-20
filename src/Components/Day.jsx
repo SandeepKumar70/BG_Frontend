@@ -22,7 +22,7 @@ export default function Day({ day, rowIdx, onDayHover, onDayClick }) {
     <>
         <div 
             onClick={handleClick}
-            className={`border border-gray-200 flex flex-col cursor-pointer hover:bg-red-500`}
+            className={`border border-gray-200 flex flex-col cursor-pointer hover:bg-slate-100`}
             role="gridcell"
             aria-label={day?.format("MMMM D, YYYY")}
         >
