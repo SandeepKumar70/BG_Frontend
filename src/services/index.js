@@ -1,4 +1,4 @@
-const base_url = import.meta.env.VITE_HOST_API;
+const base_url = import.meta.env.VITE_BACKEND_LIVE;
 
 // routers  
 
