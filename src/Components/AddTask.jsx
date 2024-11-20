@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, User, Search, AlertCircle } from 'lucide-react';
 import axios from 'axios';
-import { getAllEmployee } from '../../../Backend/src/controllers/employee.controller';
+import { getAllEmployee } from '../services';
 
 const base_url = import.meta.env.VITE_BACKEND_LIVE;
 
